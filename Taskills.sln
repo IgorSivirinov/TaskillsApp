@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31903.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taskills.WebApi", "Taskills.WebApi\Taskills.WebApi.csproj", "{D21014F3-B6AC-47DF-86C0-C5C0C7756F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskills.WebAppMVC", "Taskills.WebAppMVC\Taskills.WebAppMVC.csproj", "{AC889CD3-E935-4DD8-8395-A956E9CCE2F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D21014F3-B6AC-47DF-86C0-C5C0C7756F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21014F3-B6AC-47DF-86C0-C5C0C7756F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21014F3-B6AC-47DF-86C0-C5C0C7756F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21014F3-B6AC-47DF-86C0-C5C0C7756F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC889CD3-E935-4DD8-8395-A956E9CCE2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC889CD3-E935-4DD8-8395-A956E9CCE2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC889CD3-E935-4DD8-8395-A956E9CCE2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC889CD3-E935-4DD8-8395-A956E9CCE2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DA2670B-E5FE-4538-BABD-D3D38EEE243E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿@model Taskills.WebAppMVC.Models.Forms.CreatePlaceForm
+
+
+<div class="row">
+	<h3>Создать место</h3>
+    <form asp-action="CreatePlaceForm" method="post" class="form">
+        <input asp-for="Name" type="text" placeholder="Название" required="true"/>
+        <input asp-for="Description" type="text" placeholder="Описание" required="true"/>
+        <input asp-for="Adress" type="text" placeholder="Адрес" required="true" />
+        <input asp-for="Hashtags" type="text" placeholder="Tag"/>
+        <input type="file" accept="image/jpeg"/>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
