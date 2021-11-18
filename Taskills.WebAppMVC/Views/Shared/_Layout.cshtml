@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Taskills.WebAppMVC.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
-    <link rel="stylesheet" href="~/css/styles.css"/>
+    <link rel="stylesheet" href="~/fonts/fontawesome-all.min.css"/>
     <link rel="stylesheet" href="~/fonts/font-awesome.min.css"/>
+    <link rel="stylesheet" href="~/fonts/fontawesome5-overrides.min.css"/>
+    <link rel="stylesheet" href="~/css/-Filterable-Cards-.css">
+    <link rel="stylesheet" href="~/css/Article-Cards.css">
+    <link rel="stylesheet" href="~/css/Header-Dark.css">
+    <link rel="stylesheet" href="~/css/login-full-page-bs4.css">
+    <link rel="stylesheet" href="~/css/News-Cards.css">
+    <link rel="stylesheet" href="~/css/Profile-Edit-Form-1.css"/>
+    <link rel="stylesheet" href="~/css/Profile-Edit-Form.css"/>
+
+    <link rel="stylesheet" href="~/css/styles.css"/>
+
+
+
     <link rel="stylesheet" href="~/css/Header-Dark.css"/>
 </head>
 <body>
@@ -19,9 +32,8 @@
              <div class="collapse navbar-collapse" id="navcol-1">
 
                  <ul class="navbar-nav">
-                     <li class="nav-item"><a class="nav-link" href="#">каталог</a></li>
                      <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Dropdown </a>
-                         <div class="dropdown-menu"><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Profile</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                         <div class="dropdown-menu"><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Profile</a><a class="dropdown-item" asp-controller="List" asp-action="Index">Каталог</a><a class="dropdown-item" asp-controller="UploadPlace" asp-action="Index">Upload Place</a></div>
                      </li>
                  </ul>
                  <form class="me-auto" target="_self">
@@ -53,8 +65,18 @@
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/js/login-full-page-bs4.js"></script>
+
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/Profile-Edit-Form.js"></script>
+<script src="~/js/profileSettings.js"></script>
+<script src="~/js/login-full-page-bs4-1.js"></script>
+<script src="~/js/-Filterable-Cards-.js"></script>
+<script src="~/lib/webcamjs/webcam.min.js"></script>
+<script src="~/js/cam.js"></script>
+
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
