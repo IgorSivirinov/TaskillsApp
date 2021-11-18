@@ -16,7 +16,7 @@ namespace Taskills.WebAppMVC.Extensions.Forms
                     Lng = 1
                 },
                 Description = form.Description,
-                Hashtags = form.Hashtags.Split(' ').Select(t => new HashTag(){Tag = t}),
+                Hashtags = form.Hashtags.Split(' ').Select(t => new HashTag(){Tag = t}).ToHashSet(),
                 UserId = userId
             };
         

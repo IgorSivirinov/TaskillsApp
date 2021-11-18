@@ -10,8 +10,9 @@ public class PlaceOfRemembrance
     public string Address { get; set; }
     public PlaceOfRemembranceCoordinate Coordinate { get; set; }
 
-    [NotMapped]
-    public IEnumerable<HashTag> Hashtags { get;  set; }
+    public string CosmosImage { get; set; }
+
+    public ICollection<HashTag> Hashtags { get;  set; }
 
     public Guid UserId { get; set; }
     public User User { get; set; }

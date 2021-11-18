@@ -7,23 +7,28 @@ public class ContextCosmosDb: DbContext
 {
     public DbSet<PlaceOfRemembrance> PlacesOfRemembrance { get; set; }
     // public DbSet<PlacesGroup> PlacesGroups { get; set; }
+
     public DbSet<User> Users { get; set; }
+
+    public DbSet<CosmosImage> CosmosImages { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseCosmos(
             @"https://azure-sql.documents.azure.com:443/",
             @"sDVtSg7iXJxHk87tUg997Ux4Fd5fBkAFjfULMw7SaBBzfSiCrehUADfdJxkbSlyzSvHqLf7XFIvtaIblvMrAYQ==",
-            @"Taskills");
+            @"Taskills"
+            , sqlServerOptions => sqlServerOptions.RequestTimeout(new TimeSpan(0,0,120)));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // modelBuilder.Entity<User>()
-        //     .ToContainer("Users")
-        //     .HasMany(u => u.PlacesOfRemembrance);
-        // modelBuilder.Entity<PlaceOfRemembrance>()
-        //     .ToContainer("PlacesOfRemembrance");
-
+        modelBuilder.Entity<User>()
+            .ToContainer("Users");
+        modelBuilder.Entity<PlaceOfRemembrance>()
+            .ToContainer("PlacesOfRemembrance")
+            .OwnsMany(p => p.Hashtags);
+        modelBuilder.Entity<CosmosImage>()
+            .ToContainer("CosmosImages");
     }
 }

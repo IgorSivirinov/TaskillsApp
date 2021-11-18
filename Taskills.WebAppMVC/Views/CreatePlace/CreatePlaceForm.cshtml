@@ -3,12 +3,24 @@
 
 <div class="row">
 	<h3>Создать место</h3>
-    <form asp-action="CreatePlaceForm" method="post" class="form">
-        <input asp-for="Name" type="text" placeholder="Название" required="true"/>
-        <input asp-for="Description" type="text" placeholder="Описание" required="true"/>
-        <input asp-for="Adress" type="text" placeholder="Адрес" required="true" />
-        <input asp-for="Hashtags" type="text" placeholder="Tag"/>
-        <input type="file" accept="image/jpeg"/>
-        <button type="submit">Отправить</button>
-    </form>
+	<form asp-action="CreatePlaceForm" method="post" enctype="multipart/form-data">
+		<input asp-for="Name" placeholder="Название" required="true"/>
+		<input asp-for="Description" placeholder="Описание" required="true"/>
+		<input asp-for="Adress" placeholder="Адрес" required="true" />
+		<input asp-for="Hashtags" placeholder="Tag"/>
+		<input asp-for="File" />
+		<button type="submit">Отправить</button>
+	</form>
+	<script>
+		function setFile(input) {
+			var reader = new FileReader();
+			var file = input.files[0];
+			var img = document.querySelector(".profile-pic");
+
+			reader.readAsDataURL(file);
+			reader.onload = function () {
+				img.src = reader.result;
+			}
+		}
+	</script>
 </div>
