@@ -8,9 +8,9 @@ public class PlaceOfRemembrance
     public string Name { get; set; }
     public string Description { get; set; }
     public string Address { get; set; }
-    public PlaceOfRemembranceCoordinate Coordinate { get; set; }
 
-    public IEnumerable<HashTag> Hashtags { get;  set; }
+    public PlaceOfRemembranceCoordinate Coordinate { get; set; }
+    public ICollection<HashTag> Hashtags { get;  set; }
 
     public Guid UserId { get; set; }
     public User User { get; set; }

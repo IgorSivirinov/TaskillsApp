@@ -1,14 +1,15 @@
 ﻿@model Taskills.WebAppMVC.Models.Forms.CreatePlaceForm
 
-
 <div class="row">
-	<h3>Создать место</h3>
-    <form asp-action="CreatePlaceForm" method="post" class="form">
-        <input asp-for="Name" type="text" placeholder="Название" required="true"/>
-        <input asp-for="Description" type="text" placeholder="Описание" required="true"/>
-        <input asp-for="Adress" type="text" placeholder="Адрес" required="true" />
-        <input asp-for="Hashtags" type="text" placeholder="Tag"/>
-        <input type="file" accept="image/jpeg"/>
-        <button type="submit">Отправить</button>
-    </form>
+	<form asp-action="CreatePlaceForm" method="post" class="text-center" style="max-width: 350px; margin: auto;">
+		<input class="form-control input-margin" asp-for="Name" type="text"  placeholder="Название" required="true"/>
+		<input class="form-control input-margin" asp-for="Description" type="text" placeholder="Описание" required="true"/>
+		<input class="form-control input-margin" asp-for="Adress" type="text" placeholder="Адрес" required="true" />
+		<input class="form-control input-margin" asp-for="Hashtags" type="text" placeholder="Тэги"/>
+		<div style="box-sizing: initial; display: flex; justify-content: center;">
+			<input class="form-control input-margin" asp-for="Coordinate.Lat" type="text" placeholder="Ширина" required="true" />
+			<input class="form-control input-margin" asp-for="Coordinate.Lng" type="text" placeholder="Долгота"/>
+		</div>
+		<input class="form-control input-margin" type="submit" style="background: var(--bs-blue);border-radius: 7px;color: white;"></button>
+	</form>
 </div>

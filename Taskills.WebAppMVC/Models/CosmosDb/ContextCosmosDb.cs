@@ -20,10 +20,9 @@ public class ContextCosmosDb: DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()
-            .ToContainer("Users")
-            .HasNoDiscriminator();
+            .ToContainer("Users");
         modelBuilder.Entity<PlaceOfRemembrance>()
             .ToContainer("PlacesOfRemembrance")
-            .HasNoDiscriminator();
+            .OwnsMany(p => p.Hashtags);
     }
 }

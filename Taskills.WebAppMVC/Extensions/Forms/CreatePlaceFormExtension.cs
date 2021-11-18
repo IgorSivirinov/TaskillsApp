@@ -10,13 +10,9 @@ namespace Taskills.WebAppMVC.Extensions.Forms
             {
                 Name = form.Name,
                 Address = form.Adress,
-                Coordinate = new()
-                {
-                    Lat = 1,
-                    Lng = 1
-                },
+                Coordinate = form.Coordinate,
                 Description = form.Description,
-                Hashtags = form.Hashtags.Split(' ').Select(t => new HashTag(){Tag = t}),
+                Hashtags = form.Hashtags.Split(' ').Select(t => new HashTag(){Tag = t.Replace("#", "")}).ToHashSet(),
                 UserId = userId
             };
         

@@ -1,0 +1,29 @@
+﻿@model Place
+@{
+	ViewData["Title"] = "Create Page";
+}
+
+<div class="row" style="margin: 0;">
+	<div class="col text-start" style="width: 50%;">
+		<div class="row" style="height: 300px;">
+			<div class="col"><img class="d-block place-img" src="https://globus-extreme.ru/800/600/https/eng.kantiana.ru/images/university/kaliningrad/kaliningrad.jpg" style="max-height: 300px;width: auto;margin: auto;"></div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h2 class="text-center" style="color: white;">@Model.Name</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div style="padding: 20px;"><p>
+					@Model.Address
+				</p></div>
+			</div>
+		</div>
+	</div>
+	<div class="col text-end" style="width: 50%;">
+		<div class="text-start" style="padding: 20px;"><p>
+			@Model.Description
+		</p></div>
+	</div>
+</div>
