@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Taskills.WebAppMVC.Controllers;
 
 [Authorize]
-public class ProfileController : Controller
+public class UploadPlaceController : Controller
 {
     public IActionResult Index()
     {

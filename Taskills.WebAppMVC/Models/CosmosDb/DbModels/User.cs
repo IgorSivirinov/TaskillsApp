@@ -4,6 +4,6 @@ public class User
 {
     public Guid Id { get; set; }
 
-    public IEnumerable<Guid> PlaceOfRemembranceIds { get; set; }
+    // public ICollection<Guid> PlaceOfRemembranceIds { get; set; }
     public IEnumerable<PlaceOfRemembrance> PlacesOfRemembrance { get; set; }
 }

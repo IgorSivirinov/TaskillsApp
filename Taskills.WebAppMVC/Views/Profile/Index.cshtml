@@ -1,4 +1,53 @@
-@{
+﻿@{
     ViewData["Title"] = "Profile";
 }
-<div>khgiohg0hu9bgoguhjibnbl;o</div>
+<div class="container profile profile-view" id="profile">
+    <div class="row">
+        <div class="col-md-12 alert-col relative">
+            <div class="alert alert-info alert-dismissible absolue center" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><span>Profile save with success</span></div>
+        </div>
+    </div>
+    <form>
+        <div class="row profile-row">
+            <div class="col-md-4 relative">
+                <div class="avatar"><img class="avatar-bg center profile-pic" src="https://www.gravatar.com/avatar/1234566?size=200&amp;d=mm"></div><input onchange="setFile(this)"  class="form-control form-control" type="file" accept="image/jpeg" name="avatar-file">
+            </div>
+            <div class="col-md-8">
+                <h1>Profile </h1>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group mb-3"><label class="form-label">Username</label><div class="username">
+                                <p>username</p>
+                            </div>
+                            <style type="text/css" media="screen">
+
+                                p {
+                                    padding-left: 20px;
+                                }
+    
+                            </style></div>
+                    </div>
+                </div>
+                <div class="form-group mb-3"><label class="form-label">Email </label></div><div class="email">
+                    <p>email</p>
+                </div>
+                <style type="text/css" media="screen">
+
+                    p {
+                        padding-left: 20px;
+                    }
+    
+                </style>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12 content-right">
+                        <a asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="EditProfile" role="button"><button class="btn btn-danger disabled form-btn" type="button" style="background: var(--bs-blue);" disabled="">Set Name</button></a>
+                        <a asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="ResetPassword" role="button"><button class="btn btn-danger disabled form-btn" type="button" style="background: var(--bs-orange);" disabled="">Reset Password</button></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

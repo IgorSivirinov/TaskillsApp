@@ -1,0 +1,22 @@
+﻿@model Taskills.WebAppMVC.ViewModel.UploadViewModel
+
+@{
+    ViewData["Title"] = "Upload Place";
+}
+<div class="row" style="margin: 0;margin-top: 40px;">
+	<div class="col"><form name="formPlace" class="text-center">
+			<input class="form-control" type="text" name="name" require placeholder="Name"/>
+			<input class="form-control" type="text" name="decs" require placeholder="Description"/>
+			<input class="form-control" type="text" name="address" require placeholder="Adress"/>
+			<input class="form-control" type="text" name="tags" require placeholder="Tags"/>
+
+			<input type="file" accept="image/jpeg"/>
+			<button class="form-control" type="button" onclick="add();" style="background: var(--bs-blue);border-radius: 7px;color: white;"></button>
+		</form>
+		<form>
+			<ul id="places">
+			</ul>
+			<input class="form-control" type="button" style="background: var(--bs-blue);border-radius: 7px;color: white;"/>
+		</form>
+	</div>
+</div>
