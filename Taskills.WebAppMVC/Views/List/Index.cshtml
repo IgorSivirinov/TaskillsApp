@@ -1,5 +1,31 @@
-﻿
+﻿@model IEnumerable<PlaceListItem>
 @{
-    ViewData["Title"] = "List pints";
-
+	ViewData["Title"] = "List pints";
 }
+
+@foreach (var item in Model)
+{
+	<div style="margin: 20px; height: calc(100% - 40px); padding: 20px; padding: 20px;">
+		<div class="row">
+			<div class="card hovercard">
+
+				<div class="cardheader">
+					<div style="margin-top: 20px;">
+						<img class="place-img" alt="" src="https://globus-extreme.ru/800/600/https/eng.kantiana.ru/images/university/kaliningrad/kaliningrad.jpg">
+					</div>
+				</div>
+				<div class="card-body info">
+					<div class="title"> @item.Name </div>
+					<div class="tags"> @item.TagsString </div>
+					<div class="desc"> @item.Description </div>
+					<div class="adr" >@item.Address </div>
+				</div>
+				<div class="card-footer bottom" onclick="window.location = '@Url.Action("Index", "Place", new {id = item.Id})';return false">
+					<a class="btn btn-primary btn-sm" href="#">Перейти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+
