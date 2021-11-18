@@ -39,16 +39,18 @@ namespace Taskills.WebAppMVC.Controllers
 
         public async Task<IActionResult> CreateUser()
         {
+
             var userId = new Guid(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var user = new User
             {
-                Id = userId,
-                PlaceOfRemembranceIds = new List<Guid>(),
+                UserId = userId,
                 PlacesOfRemembrance = new List<PlaceOfRemembrance>()
             };
             await using var context = new ContextCosmosDb();
+            await context.Database.EnsureCreatedAsync();
             await context.Users.AddAsync(user);
             await context.SaveChangesAsync();
+            
             return RedirectToAction("Index");
         }
     }

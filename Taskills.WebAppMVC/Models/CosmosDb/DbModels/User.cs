@@ -2,8 +2,7 @@
 
 public class User
 {
-    public Guid Id { get; set; }
+    public Guid UserId { get; set; }
 
-    public IEnumerable<Guid> PlaceOfRemembranceIds { get; set; }
     public IEnumerable<PlaceOfRemembrance> PlacesOfRemembrance { get; set; }
 }

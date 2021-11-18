@@ -1,12 +1,9 @@
-﻿using System.Diagnostics;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Taskills.WebAppMVC.Extensions.Forms;
 using Taskills.WebAppMVC.Models.CosmosDb;
-using Taskills.WebAppMVC.Models.CosmosDb.DbModels;
 using Taskills.WebAppMVC.Models.Forms;
 
 namespace Taskills.WebAppMVC.Controllers
@@ -31,6 +28,5 @@ namespace Taskills.WebAppMVC.Controllers
             return View();
         }
 
-       
     }
 }

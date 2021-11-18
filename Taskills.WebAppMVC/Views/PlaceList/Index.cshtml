@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Taskills.WebAppMVC.Models.Items.PlaceItem>
+@{
+	ViewData["Title"] = "Place List";
+}
+
+<div class="row">
+	@{
+		foreach (var item in Model)
+		{
+			<div onclick="window.location = '@Url.Action("Index", "Place", new { id = item.Id})';return false">
+				<h2>@item.Name</h2>
+				<p>Адресс: @item.Adress</p>
+			</div>
+		}
+	}
+</div>
+764763 764763 

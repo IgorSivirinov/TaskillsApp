@@ -19,11 +19,11 @@ public class ContextCosmosDb: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
-            .ToContainer("Users")
-            .HasNoDiscriminator();
-        modelBuilder.Entity<PlaceOfRemembrance>()
-            .ToContainer("PlacesOfRemembrance")
-            .HasNoDiscriminator();
+        // modelBuilder.Entity<User>()
+        //     .ToContainer("Users")
+        //     .HasMany(u => u.PlacesOfRemembrance);
+        // modelBuilder.Entity<PlaceOfRemembrance>()
+        //     .ToContainer("PlacesOfRemembrance");
+
     }
 }
