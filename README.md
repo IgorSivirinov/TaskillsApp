@@ -10,3 +10,6 @@ https://localhost:5001
 https://localhost:7037
 https://localhost:44312
 https://localhost:7169
+
+
+Ссылка на сайт: https://tieventsy.azurewebsites.net/
