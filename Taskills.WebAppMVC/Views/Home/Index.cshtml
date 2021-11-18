@@ -1,9 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <button name="button" asp-action="CreateUser"></button>
-</div>
+<header>
+     <div class="container hero">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h1 class="text-center">Познавай Калининград!</h1>
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active hoverwrap" onclick="onClick()"><img class="w-100 d-block" src="https://globus-extreme.ru/800/600/https/eng.kantiana.ru/images/university/kaliningrad/kaliningrad.jpg" alt="Slide Image"><div class="hovercap">Something</div></div>
+                            <div class="carousel-item hoverwrap"><img class="w-100 d-block" src="https://eng.kantiana.ru/images/university/kaliningrad/Sights-of-Kaliningrad-1.png" alt="Slide Image"><div class="hovercap">Something</div></div>
+                            <div class="carousel-item hoverwrap"><img class="w-100 d-block" src="https://st03.kakprosto.ru/images/article/2016/10/10/167181_57fbf1331d78857fbf1331d7c2.jpeg" alt="Slide Image"><div class="hovercap">Something</div></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>

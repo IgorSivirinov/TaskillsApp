@@ -1,0 +1,50 @@
+body {
+    background: rgb(68, 68, 68);
+}
+h1 {
+    color: white;
+}
+/* (A) WRAPPER */
+.hoverwrap {
+  position: relative;
+  /*max-width: 500px;*/ /* OPTIONAL */
+}
+
+/* (B) RESPONSIVE IMAGE */
+.hoverwrap img { width: 100%; }
+
+/* (C) CAPTION */
+.hovercap {
+  /* (C1) DIMENSIONS */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  /* (C2) BOTTOM */
+  position: absolute;
+  bottom: 0;
+  /* (C3) COLORS */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* (D) SHOW/HIDE */
+.hovercap {
+  visibility: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hoverwrap:hover .hovercap {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Header full height */
+/* .header-dark { */
+/*   height: 100%; */
+/* } */
+/* body { */
+/*   height: 100%; */
+/* } */
+/* html { */
+/*   height: 100%; */
+/* } */
