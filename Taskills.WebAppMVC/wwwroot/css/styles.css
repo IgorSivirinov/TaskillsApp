@@ -1,50 +1,67 @@
+/* WRAPPER */
 body {
     background: rgb(68, 68, 68);
 }
 h1 {
     color: white;
 }
-/* (A) WRAPPER */
+label {
+    color: white;
+}
+p {
+    color: white;
+}
 .hoverwrap {
   position: relative;
-  /*max-width: 500px;*/ /* OPTIONAL */
 }
 
-/* (B) RESPONSIVE IMAGE */
-.hoverwrap img { width: 100%; }
+/* RESPONSIVE IMAGE */
 
-/* (C) CAPTION */
+.hoverwrap img {
+  width: 100%;
+}
+
+/* CAPTION */
+
 .hovercap {
-  /* (C1) DIMENSIONS */
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  /* (C2) BOTTOM */
   position: absolute;
   bottom: 0;
-  /* (C3) COLORS */
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
 }
 
-/* (D) SHOW/HIDE */
+/* SHOW/HIDE */
+
 .hovercap {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
 }
+
 .hoverwrap:hover .hovercap {
   visibility: visible;
   opacity: 1;
 }
 
-/* Header full height */
-/* .header-dark { */
-/*   height: 100%; */
-/* } */
-/* body { */
-/*   height: 100%; */
-/* } */
-/* html { */
-/*   height: 100%; */
-/* } */
+/* HEADER FULL HEIGHT */
+
+
+.place {
+  position: relative;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+
+.place-img {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}
+
